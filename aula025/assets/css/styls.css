@@ -57,6 +57,9 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-.resultado{
-    background-color: #5D8A66;
+.P-Resultado{
+    background-color: #1feb48;
+}
+.bad{
+    background-color: red;
 }
