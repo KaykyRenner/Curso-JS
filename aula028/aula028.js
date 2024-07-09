@@ -1,23 +1,32 @@
-const data = new Date('1987-04-22 00:00:00')
-const diaSemana = (data.getDay())
-let DiaSemanaTexto
-//if (diaSemana == 0){
-//    DiaSemanaTexto = 'domingo'
-//} else if(diaSemana == 1){
-//    DiaSemanaTexto = 'segunda'
-//}else if(diaSemana == 2){
-//    DiaSemanaTexto = 'terça'
-//}else if(diaSemana == 3){
-//    DiaSemanaTexto = 'quarta'
-//}else if(diaSemana == 4){
-//    DiaSemanaTexto = 'quinta'
-//}else if(diaSemana == 5){
-//    DiaSemanaTexto = 'sexta'
-//}else if(diaSemana == 6){
-//    DiaSemanaTexto = 'sábado'
-//} else {
-//    DiaSemanaTexto ='dia inválido, tente novamente'
-//}
-
-
-console.log(DiaSemanaTexto, diaSemana)
+const data = new Date('1987-04-22 00:00:00');
+let DiaSemana = data.getDay();
+function getDiaSemanaTexto(DiaSemana){
+    let DiaSemanaTexto;
+switch(DiaSemana){
+    case 0:
+        DiaSemanaTexto = 'domingo';
+        return DiaSemanaTexto;
+    case 1:
+        DiaSemanaTexto = 'segunda';
+        return DiaSemanaTexto;
+    case 2:
+        DiaSemanaTexto = 'terça';
+        return DiaSemanaTexto;
+    case 3:
+        DiaSemanaTexto = 'quarta';
+        return DiaSemanaTexto;
+    case 4:
+        DiaSemanaTexto = 'quinta';
+        return DiaSemanaTexto;
+    case 5:
+        DiaSemanaTexto = 'sexta';
+        return DiaSemanaTexto;
+    case 6:
+        DiaSemanaTexto = 'sábado';
+        return DiaSemanaTexto;
+    default:
+        DiaSemanaTexto = '';
+        return DiaSemanaTexto;
+}}
+const DiaSemanaTexto = getDiaSemanaTexto(DiaSemana);
+console.log(DiaSemana, DiaSemanaTexto);
