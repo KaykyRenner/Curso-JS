@@ -1,7 +1,8 @@
 function Hora(){
-    let data = new Date
+    let data = new Date     ;
     return data.toLocaleTimeString('pt-BR', {
         hour12: false
+        
     })
 }
 const time = setInterval(function(){ // funçao que mostra a hr em 1 em 1 seg
