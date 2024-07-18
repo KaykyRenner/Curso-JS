@@ -39,6 +39,7 @@ function CriandoP(className){ //função que cria um P
     //p.classList.add(className)//adicionando classe no <p  class='P-Resultado'></p>
     return p;
 }
+
 function setResultado(msg, isValid){ //funçao que recebe um resultado e fala se é valido ou não
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML= '';
