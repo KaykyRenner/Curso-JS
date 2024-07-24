@@ -1,4 +1,4 @@
-function Criapessoa(nome,sobreNome,a,p){
+function criapessoa(nome,sobreNome,a,p){
     return {
         nome, //isso é um atributo
         sobreNome,
@@ -26,11 +26,11 @@ function Criapessoa(nome,sobreNome,a,p){
         }
     };
 };
-const p1 = Criapessoa('Kayky','Renner',80, 1.68)
+const p1 = criapessoa('Kayky','Renner',80, 1.68)
 p1.nomeCompleto = 'Maria Oliveira Silva'
 console.log(p1.nomeCompleto)//ou seja, podemos pegar o imc como se ele agora fosse um atributo e não uma função
-const p2 = Criapessoa('Isabelle','Cândido',60, 1.60)
-const p3 = Criapessoa('Milene','Dos Siqueira',60, 1.55)
+const p2 = criapessoa('Isabelle','Cândido',60, 1.60)
+const p3 = criapessoa('Milene','Dos Siqueira',60, 1.55)
 console.log(p1.nomeCompleto,p1.imc)
 console.log(p2.nomeCompleto,p2.imc)
 console.log(p3.nomeCompleto,p3.imc)
