@@ -21,11 +21,15 @@ function* gerador2(){
         i++;
     }
 }
-const g2 = gerador2()
-console.log(g2.next().value)
-console.log(g2.next().value)
-console.log(g2.next().value)
 
+const g2 = gerador2()
+setInterval(() => {
+    console.log(g2.next().value)
+}, 100);
+
+console.log(g2.next().value)
+console.log(g2.next().value)
+console.log(g2.next().value)
 console.log('######')
 
 function* gerador3(){ 
