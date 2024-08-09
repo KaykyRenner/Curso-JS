@@ -1,7 +1,7 @@
 const buttonAddTarefa = document.querySelector('.buttonAddTarefa')
 const InputTarefa = document.querySelector('.InputTarefa')
 const tarefas = document.querySelector('.tarefas')
-function CreatLi(){
+function     CreatLi(){
     const li = document.createElement('li') // criando um li
     return li
 }
@@ -9,7 +9,7 @@ function AddLiEmUL(textInput){
     const li = CreatLi()
     tarefas.appendChild(li) // adicionando li em ul
     li.innerHTML += textInput
-    clearTask() //chamando a fução que limpa o input, ou seja, sempre que clicar em "enviar" o input sera limpado
+    clearTask() //chamando a fução que limpa o input, ou seja, sempre que clicar em "apagar" o input sera limpado
     CreatButtonDelet(li)
     SaveTask()
 }
