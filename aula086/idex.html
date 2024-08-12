@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <section class="container">
+        <h1>formulário de cadastro</h1>
+        <ul>
+            <li>nenhum campo pode estar vazio</li>
+            <li>usuário só pode conter letras ou números</li>
+            <li>usuário deve conter pelo menos 3 e máximo 12 caracteres</li>
+            <li>senha precisa ser entre 6 a 12 caracteres</li>
+        </ul>
+        <form action="/" method="post" class="formulário">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome">
+            <label for="sobreNome">Sobre nome</label>
+            <input type="text" id="sobreNome">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf">
+            <label for="usu">Usuário</label>
+            <input type="text" id="usu">
+            <label for="senha">Senha</label>
+            <input type="text" id="senha">
+            <label for="repetirSenha">Repetir senha</label>
+            <input type="text" id="repetirSenha">
+            <button type="submit">ENVIAR CACETA</button>
+        </form>
+    </section>
+    <script src="arquivo.js"></script>
+</body>
+</html>
