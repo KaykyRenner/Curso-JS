@@ -64,3 +64,8 @@ ul{
 .resultado{
     background-color: #5D8A66;
 }
+.error-text{
+    color: red;
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+}
