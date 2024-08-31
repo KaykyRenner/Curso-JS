@@ -1,14 +1,27 @@
-const fs = require('fs').promises
-const path = require('path')
+const fs = require("fs").promises;
+const path = require("path");
 
 async function readdir(rotDir) {
-    rotDir = rotDir || path.resolve(__dirname)
-    const files  = await fs.readdir(rotDir)
-    Walck(files)
+  rotDir = rotDir || path.resolve(__dirname);
+  const files = await fs.readdir(rotDir);
+  Walck(files, rotDir);
 }
-function Walck(files){
-    for(let file of files){
-        console.log(file)
+async function Walck(files, rotDir) {
+  for (let file of files) {
+    const fileFullPath = path.resolve(rotDir, file);
+    const stats = await fs.stat(fileFullPath);
+
+    if (/\.git/g.test(fileFullPath)) continue;
+    if (/NODE/g.test(fileFullPath)) continue;
+
+    if (stats.isDirectory()) {
+      readdir(fileFullPath);
+      continue;
+    }
+    if (!/\.html$/g.test(fileFullPath)) {
+      continue;
+    }
+    console.log(fileFullPath);
+  }
 }
-}
-readdir('C:\\Users\\kayky\\OneDrive\\Documentos\\Curso_jS\\Curso-JS\\')
+readdir("C:\\Users\\kayky\\OneDrive\\Documentos\\Curso_jS\\Curso-JS\\");
