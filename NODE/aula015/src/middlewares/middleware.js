@@ -1,4 +1,4 @@
 module.exports = (req,res,next)=>{
-    if(req.body.cliente) {console.log(`vi teu ${req.body.cliente}`)}
+    res.locals.umaVarialvel = 'este é o valor da variavel'
     next()    
 }
